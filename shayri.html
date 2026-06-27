@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>दिल से - खूबसूरत लव शायरी</title>
+    <!-- Google Fonts for beautiful Hindi Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #ffebee 0%, #fce4ec 100%);
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-family: 'Yatra One', cursive;
+            font-size: 3.5rem;
+            color: #c2185b;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #880e4f;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Main Container for Cards */
+        .shayari-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Card Styling */
+        .shayari-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid rgba(244, 143, 177, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .shayari-card::before {
+            content: "❤️";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 3rem;
+            opacity: 0.07;
+        }
+        .shayari-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(194, 24, 91, 0.2);
+        }
+
+        /* Shayari Text Styling */
+        .shayari-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #4a148c;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        /* Button Styling */
+        .copy-btn {
+            background: linear-gradient(135deg, #ec407a, #d81b60);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.3);
+            align-self: center;
+        }
+        .copy-btn:hover {
+            background: linear-gradient(135deg, #d81b60, #ad1457);
+            box-shadow: 0 8px 20px rgba(216, 27, 96, 0.4);
+            transform: scale(1.05);
+        }
+        .copy-btn.copied {
+            background: #2e7d32;
+            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #880e4f;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>दिल से शायरी</h1>
+        <p>एहसास जो लफ्जों में उतर आए...</p>
+    </header>
+
+    <div class="shayari-container">
+
+        <!-- Shayari 1 -->
+        <div class="shayari-card">
+            <p class="shayari-text">उदास नहीं होना क्योंकि मैं साथ हूँ,<br>सामने न सही पर आस-पास हूँ,<br>पलकों को बंद करके दिल से याद करना,<br>मैं कोई और नहीं एक प्यारा सा एहसास हूँ।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 2 -->
+        <div class="shayari-card">
+            <p class="shayari-text">आँखों की चमक पलकों की शान हो तुम,<br>इस दिल की धड़कन और मेरी जान हो tum,<br>तुमसे ही शुरू होती है जिंदगी मेरी,<br>भला कैसे कह दूँ कि एक मेहमान हो तुम।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 3 -->
+        <div class="shayari-card">
+            <p class="shayari-text">धड़कनों को कुछ तो काबू में कर ऐ दिल,<br>अभी तो पलकों का झुकना बाकी है,<br>उनका मुस्कुराना बाकी है और,<br>मेरा होश खोना बाकी है।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 4 -->
+        <div class="shayari-card">
+            <p class="shayari-text">आपकी दोस्ती ने हमें जीना सिखाया,<br>रोते हुए दिल को हंसना सिखाया,<br>महफूज़ थे हम अपनी ही दुनिया में,<br>आपने हमें किसी के ख्यालों में खोना सिखाया।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 5 -->
+        <div class="shayari-card">
+            <p class="shayari-text">कोरा कागज था ये दिल मेरा,<br>आपने इसपे अपना नाम लिख दिया,<br>अब तो इस धड़कन पर हक है आपका,<br>आपने हमारा हर एक लम्हा अपने नाम कर दिया।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 6 -->
+        <div class="shayari-card">
+            <p class="shayari-text">तुम्हें देखते हैं तो लगता है ऐसा,<br>कि जैसे कोई ख्वाब सच हो गया हो,<br>मिली हो तुम मुझे इस तरह से,<br>कि खुदा का कोई सहारा मिल गया हो।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 7 -->
+        <div class="shayari-card">
+            <p class="shayari-text">चेहरे पर मेरे जुल्फों को गिराया ना करो,<br>इस तरह से मुस्कुरा कर हमें सताया ना करो,<br>होश उड़ जाते हैं हमारे आपको देखकर,<br>आप इस तरह निगाहें मिलाया ना करो।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 8 -->
+        <div class="shayari-card">
+            <p class="shayari-text">एक शाम आती है तुम्हारी याद लेकर,<br>एक शाम जाती है तुम्हारी याद देकर,<br>पर मुझे तो उस शाम का इंतजार है,<br>जो आये तुम्हें अपने साथ लेकर।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 9 -->
+        <div class="shayari-card">
+            <p class="shayari-text">दिल की धड़कन बन कर दिल में रहेंगे,<br>जब तक जान है तब तक मोहब्बत करेंगे,<br>अगर दूर चले गए तुम हमसे कभी,<br>तो तुम्हारी यादों के सहारे ही जी लेंगे।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 10 -->
+        <div class="shayari-card">
+            <p class="shayari-text">मोहब्बत का कोई तराजू नहीं होता,<br>परवाह ही बताती है कि प्यार कितना है,<br>तुम्हारे बिना एक पल भी नहीं कटता,<br>अब तुम ही बताओ ये कैसा रिश्ता है।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 11 -->
+        <div class="shayari-card">
+            <p class="shayari-text">खुशबू की तरह आपकी सांसों में बसेंगे,<br>लफ्जों की तरह आपकी होठों पर सजेंगे,<br>ढूंढने से भी नहीं मिलेंगे हम आपको,<br>क्योंकि हम आपके दिल में घर करके रहेंगे।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 12 -->
+        <div class="shayari-card">
+            <p class="shayari-text">आँखों में छुपा रखा है चेहरा आपका,<br>दिल में बसा रखा है नाम आपका,<br>अब तो बस आपसे ही है हर उम्मीद मेरी,<br>क्योंकि आप ही हो अब पहला और आखिरी प्यार मेरा।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 13 -->
+        <div class="shayari-card">
+            <p class="shayari-text">कितना प्यार है तुमसे ये कहना नहीं आता,<br>बस इतना जानते हैं कि तुम्हारे बिना रहना नहीं आता,<br>तुम दूर जाओ ये बर्दाश्त नहीं होता,<br>क्योंकि तुम्हारे बिना ये दिल अब धड़कना नहीं चाहता।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 14 -->
+        <div class="shayari-card">
+            <p class="shayari-text">आपकी हसीन आँखों में खोना चाहता हूँ,<br>आपकी बाहों में सुकून से सोना चाहता हूँ,<br>दुनिया की कोई ताकत ना कर सके दूर हमें,<br>मैं हमेशा हमेशा के लिए आपका होना चाहता हूँ।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 15 -->
+        <div class="shayari-card">
+            <p class="shayari-text">इश्क का रिश्ता भी कितना अजीब होता है,<br>मिल जाये तो बातें लंबी और ना मिले तो यादें लंबी,<br>पर हमें तो आपकी हर एक बात से प्यार है,<br>क्योंकि आपका साथ ही हमारी सबसे बड़ी खुशी है।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 16 -->
+        <div class="shayari-card">
+            <p class="shayari-text">कुछ लोग खोते हैं तो याद आते हैं,<br>कुछ लोग सोते हैं तो ख्वाब बन जाते हैं,<br>पर आपकी बात ही कुछ अलग है,<br>आपको जितना याद करो आप उतने ही पास आते हैं।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 17 -->
+        <div class="shayari-card">
+            <p class="shayari-text">ना चांद की चाहत ना तारों की फरमाइश,<br>हर जनम में तुम मिलो बस यही है ख्वाहिश,<br>आपका साथ मिल गया तो दुनिया जीत लेंगे,<br>आपके बिना तो ये जिंदगी एक बेजान सी कोशिश है।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 18 -->
+        <div class="shayari-card">
+            <p class="shayari-text">चांदनी रात में एक प्यारा सा ख्वाब हो तुम,<br>मेरे हर एक सवाल का जवाब हो तुम,<br>लोग कहते हैं कि चांद बहुत खूबसूरत है,<br>पर मेरे लिए तो चांद से भी हसीन आफताब हो तुम।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 19 -->
+        <div class="shayari-card">
+            <p class="shayari-text">दुनिया में हजारों लोग हैं पर,<br>मेरा ये दिल बस तुम्हें ही ढूंढता है,<br>आपकी एक झलक पाने के लिए तरस्ता है,<br>क्योंकि ये आपसे सच्ची मोहब्बत करता है।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 20 -->
+        <div class="shayari-card">
+            <p class="shayari-text">तेरा जिक्र जिसमें ना हो वह फसाना छोड़ देंगे,<br>साथ तेरा ना मिले तो जमाना छोड़ देंगे,<br>तू एक बार मुस्कुरा कर कह दे अगर,<br>तो हम तेरी खुशी के लिए रोना छोड़ देंगे।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 21 -->
+        <div class="shayari-card">
+            <p class="shayari-text">आपके आने से जिंदगी बदल सी गयी है,<br>हर खुशी मेरे दामन में सिमट सी गयी है,<br>ऐसा लगता है जैसे जन्नत मिल गयी हो,<br>आपके प्यार की रंगत मुझ पर चढ़ सी गयी है।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 22 -->
+        <div class="shayari-card">
+            <p class="shayari-text">जिंदगी के हर मोड़ पर तेरा साथ चाहिए,<br>हाथों में मेरे बस तेरा हाथ चाहिए,<br>दुनिया की कोई खुशी नहीं चाहिए मुझे,<br>बस हर जनम में तेरा ही प्यार चाहिए।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 23 -->
+        <div class="shayari-card">
+            <p class="shayari-text">आँखें खुलें तो चेहरा तुम्हारा हो,<br>आँखें बंद हों तो ख्वाब तुम्हारा हो,<br>मर भी जायें तो कोई गम नहीं,<br>बस कफन की जगह आंचल तुम्हारा हो।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 24 -->
+        <div class="shayari-card">
+            <p class="shayari-text">सुबह का सूरज तुम्हारी याद दिलाता है,<br>रात का चांद तुम्हारी बातें बताता है,<br>हम हर लम्हा तुम्हारे ख्यालों में रहते हैं,<br>क्योंकि हर सांस में तेरा ही नाम आता है।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+        <!-- Shayari 25 -->
+        <div class="shayari-card">
+            <p class="shayari-text">एक तुम ही हो जिसे देख कर दिल को सुकून मिलता है,<br>एक तुम ही हो जिसे सोच कर चेहरा खिलता है,<br>खुदा से हर रोज़ बस यही दुआ मांगते हैं,<br>कि हमारा रिश्ता हमेशा यूंही सलामत रहे।</p>
+            <button class="copy-btn" onclick="copyShayari(this)">शायरी कॉपी करें</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Created By:</strong> Abhi Chaudhary </p>
+            <!-- Niche diye gaye XXXXXXXXXX ki jagah apna asli mobile number daal dein -->
+            <p><strong>Contact us :</strong> <a href="https://wa.me/91 7706042502" target="_blank">+91 XXXXXXXXXX</a> (WhatsApp)</p>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #880e4f;">&copy; 2026 दिल से शायरी। All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Copy Functionality -->
+    <script>
+        function copyShayari(button) {
+            const shayariText = button.previousElementSibling.innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = shayariText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+            
+            const originalText = button.innerText;
+            button.innerText = "कॉपी हो गया! ✓";
+            button.classList.add('copied');
+            
+            setTimeout(() => {
+                button.innerText = originalText;
+                button.classList.remove('copied');
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
